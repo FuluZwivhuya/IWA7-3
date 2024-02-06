@@ -14,9 +14,9 @@ const newAmount = -parseInt(leoBalance) + -parseFloat(sarahBalance);//parseInt h
 const owed =`R ${newAmount.toFixed(2)}`
 
 //console.log('R', parseInt(leoBalance) + parseFloat(sarahBalance));
-const leo = "{leoName} + {leoSurname} + \"Owed\" + \"R\" + {sarahBalance}";
-const sarah = "{leoName} + {surname} + \"Owed\" + \"R\" + {sarahBalance}"
-const total = "Total amount owed: "
-const result = leo + sarah + divider + divider + total + owed + divider
+const leo = `${leoName} ${leoSurname}(Owed : R${-parseInt(leoBalance).toFixed(2)})`;
+const sarah = `${sarahName}${sarahSurname}(Owed : R${-parseFloat(sarahBalance).toFixed(2)})`;
+const total = "Total amount owed:";
+const result = `${leo}\n${sarah}\n${divider}\n${total}${owed}\n${divider}`
 
 console.log(result);
